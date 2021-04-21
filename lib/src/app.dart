@@ -13,6 +13,7 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
+  ScrollController _scrollController = new ScrollController();
   var temblor = Colors.blueGrey;
   var counter = 0;
   var url = Uri.parse('https://jsonplaceholder.typicode.com/photos/');
@@ -35,7 +36,9 @@ class AppState extends State<App> {
           ),
           body: ImageList(
             imageList: images,
-          )),
+            scrollController: _scrollController,
+          ),
+      ),
     );
   }
 
@@ -47,8 +50,11 @@ class AppState extends State<App> {
         ImageModel.fromJason(parsedJason: json.decode(response.body));
     setState(() {
       images.add(imageModel);
+      _scrollController.animateTo(
+        _scrollController.position.maxScrollExtent,
+        curve: Curves.easeIn,
+        duration: const Duration(milliseconds: 300),
+      );
     });
-
-    print(imageModel.title);
   }
 }

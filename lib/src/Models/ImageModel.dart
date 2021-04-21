@@ -1,5 +1,4 @@
 /// ahmed nagy cc 2021
-
 class ImageModel {
   int albumId;
   int id;
@@ -9,7 +8,7 @@ class ImageModel {
 
   ImageModel({this.albumId, this.id, this.title, this.thumbnailUrl, this.url});
 
-  ImageModel.fromJason({Map<String,dynamic> parsedJason}) {
+  ImageModel.fromJason({Map<String, dynamic> parsedJason}) {
     id = parsedJason['id'];
     albumId = parsedJason['albumId'];
     title = parsedJason['title'];
