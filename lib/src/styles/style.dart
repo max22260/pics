@@ -1,8 +1,7 @@
 /// ahmed nagy cc 2021
 import 'package:flutter/material.dart';
 
-class  Style {
-
+class Style {
   static final descTextStyle = TextStyle(
     color: Colors.blue,
     fontWeight: FontWeight.w300,

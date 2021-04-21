@@ -23,21 +23,21 @@ class AppState extends State<App> {
   Widget build(context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              'app',
-            ),
-            backgroundColor: temblor,
+        appBar: AppBar(
+          title: Text(
+            'app',
           ),
-          floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add),
-            backgroundColor: temblor,
-            onPressed: fetchImage,
-          ),
-          body: ImageList(
-            imageList: images,
-            scrollController: _scrollController,
-          ),
+          backgroundColor: temblor,
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          backgroundColor: temblor,
+          onPressed: fetchImage,
+        ),
+        body: ImageList(
+          imageList: images,
+          scrollController: _scrollController,
+        ),
       ),
     );
   }

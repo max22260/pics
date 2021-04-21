@@ -5,24 +5,20 @@ import 'package:pics/src/styles/style.dart';
 
 class ImageList extends StatelessWidget {
   final List<ImageModel> imageList;
-  final ScrollController scrollController ;
+  final ScrollController scrollController;
 
-
-
-
-  ImageList({this.imageList,this.scrollController});
+  ImageList({this.imageList, this.scrollController});
 
   @override
   Widget build(context) {
     return ListView.builder(
-      controller: scrollController ,
+      controller: scrollController,
       itemCount: imageList.length,
       itemBuilder: (context, int index) {
         return buildImage(imageList[index]);
       },
     );
   }
-
 
   Widget buildImage(ImageModel image) {
     return Container(
