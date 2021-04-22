@@ -25,12 +25,13 @@ class ImageList extends StatelessWidget {
       padding: EdgeInsets.all(16),
       margin: EdgeInsets.all(16),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.blueGrey),
+        color: Colors.white,
+        border: Border.all(color: Colors.blueGrey, width: 14),
         borderRadius: BorderRadius.all(Radius.circular(16)),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
+        children: <Widget>[
           Image.network(image.url),
           Padding(
             padding: const EdgeInsets.all(16.0),

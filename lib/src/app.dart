@@ -23,6 +23,7 @@ class AppState extends State<App> {
   Widget build(context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
           title: Text(
             'app',
